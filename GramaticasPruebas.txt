@@ -1,0 +1,81 @@
+A = 0
+B = 0
+salir = 0
+
+DO:
+    IMPRIMIR("A:")
+    LEE(A)
+
+    IMPRIMIR("B:")
+    LEE(B)
+
+    SI A == 0:
+        salir = 1
+    .SINO:
+
+        SI B == 0:
+            salir = 1
+        .SINO:
+
+            SI A > 9:
+                IMPRIMIR("A > 9")
+            .SINO:
+
+                SI B > 9:
+                    IMPRIMIR("B > 9")
+                .SINO:
+
+                    SI A > B:
+
+                        pot = 0
+                        i = 0
+
+                        PARA i ENRANGO(1,A):
+
+                            pot = B ^ i
+                            IMPRIMIR(pot)
+
+                        .
+                    .
+
+                    SI A < B:
+
+                        cubo = 0
+                        i = 0
+
+                        PARA i ENRANGO(A,B):
+
+                            cubo = i * i
+                            cubo = cubo * i
+
+                            IMPRIMIR(cubo)
+
+                        .
+                    .
+
+                    SI A == B:
+
+                        numero = 1
+                        contador = 0
+                        res = 0
+
+                        MIENTRAS contador < 10:
+
+                            res = numero // 2
+
+                            SI res == 0:
+
+                                IMPRIMIR(numero)
+
+                                contador = contador + 1
+                            .
+
+                            numero = numero + 1
+
+                        .
+                    .
+                .
+            .
+        .
+    .
+.WHILE salir == 0.
